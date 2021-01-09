@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Ropa+Sans:regular,italic);
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+.items-container {
+    width: 80%;
+    height: 100%;
+    margin: 1em auto;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 350px));
+    font-family: "Ropa Sans";
+    font-weight: 300;
+}
+.todo-item {
+    position: relative;
+    display: flex;
+    padding: 1em;
+    margin: 1.5em;
+    justify-content: space-between;
+    align-items: baseline;
+    border: 1px solid rgba(29, 156, 253, 0.953);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.todo-item:nth-child(even) {
+    background: rgba(21, 110, 179, 0.953);
+}
+.hovered {
+    transform: scale(1.1);
+    background: rgba(131, 178, 228, 0.953) !important;
+}
+.todo-item h4 {
+    width: 70%;
+    font-size: calc(100% + 1vmin);
+}
+.todo-item h4::after {
+    content: "";
+    width: 1px;
+    height: 40%;
+    background: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    /* top: 10%; */
+    bottom: 30%;
+    right: 20%;
+}
+
+.todo-item input[type="checkbox"] {
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+        inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    /* padding: 9px; */
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
