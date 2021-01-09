@@ -19,6 +19,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(150px, 350px));
     font-family: "Ropa Sans";
     font-weight: 300;
+    overflow: hidden;
 }
 .todo-item {
     position: relative;
@@ -30,14 +31,14 @@ body {
     border: 1px solid rgba(29, 156, 253, 0.953);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
-.todo-item:nth-child(even) {
-    background: rgba(21, 110, 179, 0.953);
-}
 .hovered {
     transform: scale(1.1);
     background: rgba(131, 178, 228, 0.953) !important;
 }
+.todo-item:nth-child(even) {
+    background: rgba(21, 110, 179, 0.953);
+}
+
 .todo-item h4 {
     width: 70%;
     font-size: calc(100% + 1vmin);

@@ -3,26 +3,27 @@ import React, { Component } from "react";
 export default class Todo extends Component {
     constructor() {
         super();
-        this.state = { isHover: false };
-        this.onHover = this.onHover.bind(this);
+        this.state = { isClicked: false };
+        this.clicked = this.clicked.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
-    onHover() {
+
+    clicked() {
         this.setState((prevState) => {
-            return { isHover: !prevState.isHover };
+            return { isClicked: !prevState.isClicked };
         });
-        console.log(this.state.isHover);
     }
     handleClick() {
         console.log("clicked");
         const clicked = () => this.props.onChangeProps(this.props.id);
-        this.onHover();
         clicked();
+        this.clicked();
     }
     render() {
         return (
             <div
-                className={`todo-item ${this.state.isHover ? "hovered" : " "}`}
+                className={`animate__animated animate__backInDown animate__slower todo-item 
+                ${this.state.isClicked ? " hovered" : " "}`}
                 onClick={() => this.handleClick()}
             >
                 <h4>{this.props.title}</h4>
