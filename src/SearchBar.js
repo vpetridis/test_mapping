@@ -3,7 +3,7 @@ import React from "react";
 const SearchBar = ({ onChange, placeholder }) => {
     return (
         <div className="search-container">
-            <h2>Start searching you lorem ipsum todos...</h2>
+            <h2>Start searching your <em>lorem ipsum todos...</em></h2>
             <input
                 type="text"
                 name="search"
