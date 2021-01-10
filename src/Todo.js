@@ -22,7 +22,7 @@ export default class Todo extends Component {
     render() {
         return (
             <div
-                className={`animate__animated animate__backInDown animate__slower todo-item 
+                className={`animate__animated animate__backInUp animate__faster todo-item 
                 ${this.state.isClicked ? " hovered" : " "}`}
                 onClick={() => this.handleClick()}
             >
